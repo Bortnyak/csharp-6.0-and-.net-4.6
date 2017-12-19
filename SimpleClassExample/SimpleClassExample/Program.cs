@@ -13,27 +13,24 @@ namespace SimpleClassExample
             Console.WriteLine(" ***** Fun with Class Types ***** ");
             
             //Вызов стандартного конструктора
-            Car chuck = new Car();
+           // Car chuck = new Car();
             //Печать состояния
-            chuck.PrintState();
+            //chuck.PrintState();
             //Разместить в память и сконфигурировать объект Car.
-            Car myCar = new Car();
-            myCar.petName = "Henry";
-            myCar.currSpeed = 10;
 
             //Создается объект Car по имени Mary, со скоростью 0 миль в час.
-            Car mary = new Car("Mary");
-            mary.PrintState();
+            //Car mary = new Car("Mary");
+            //mary.PrintState();
 
             //Создается объект Car по имени Daisy, со скоростью 75 миль в час.
-            Car daisy = new Car("Daisy", 75);
-            daisy.PrintState();
+            //Car daisy = new Car("Daisy", 75);
+            //daisy.PrintState();
 
             //Создается объект Motorcycle с мотоциклистом по имени Tiny
-            Motorcycle c = new Motorcycle(5);
-            c.SetDriverName("Tiny");
-            c.PopAWheely();
-            Console.WriteLine("Rider name is {0}", c.name);
+           // Motorcycle c = new Motorcycle(5);
+            //c.SetDriverName("Tiny");
+            //c.PopAWheely();
+            //Console.WriteLine("Rider name is {0}", c.name);
             
 
             //Увеличить скорость автомобиля в несколько раз и вывести новое состояние
@@ -42,6 +39,14 @@ namespace SimpleClassExample
             //    myCar.SpeedUp(5);
             //    myCar.PrintState();
             //}
+
+
+            // Создать обьект Motorctycle.
+            Motorcycle c = new Motorcycle(5);
+            c.SetDriverName("Tiny");
+            c.PopAWheely();
+            Console.WriteLine("Rider name is {0}", c.driverName);
+
             Console.ReadLine();
         }
     }
