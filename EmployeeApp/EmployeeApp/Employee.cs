@@ -13,6 +13,45 @@ namespace EmployeeApp
         private int empID;
         private float currPay;
 
+        //Метод доступа
+        public string GetName()
+        {
+            return empName;
+        }
+
+        public int GetID()
+        {
+            return empID;
+        }
+
+        public float GetPay()
+        {
+            return currPay;
+        }
+
+        //Метод изминения
+        public void SetName(string name)
+        {
+            if (name.Length > 15)
+            {
+                Console.WriteLine("Error! Name length exceeds 15 characters!");
+            }
+            else
+            {
+                empName = name;
+            }
+        }
+
+        public void SetID(int id)
+        {
+            empID = id;
+        }
+
+        public void SetPay(float pay)
+        {
+            currPay = pay;
+        }
+
         //Конструкторы.
         public Employee() { }
         public Employee(string name, int id, float pay)
