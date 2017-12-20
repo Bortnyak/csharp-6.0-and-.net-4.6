@@ -16,8 +16,14 @@ namespace StaticDataAndMembers
         //Конструктор устанавливает значение статического поля currInterestRete.
         public SavingsAccount(double balance)
         {
-            currentInterestRate = 0.04; //Статические данные!
             currBalance = balance;
+        }
+
+        //Статический конструктор
+        static SavingsAccount()
+        {
+            Console.WriteLine("In static ctor!");
+            currentInterestRate = 0.04; //Статические данные!
         }
 
         //Статические члены для установки/получения процентной ставки
