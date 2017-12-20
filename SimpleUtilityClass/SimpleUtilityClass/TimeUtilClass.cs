@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static System.Console;
 
 namespace SimpleUtilityClass
 {
@@ -10,12 +11,17 @@ namespace SimpleUtilityClass
     {
         public static void PrintTime()
         {
-            Console.WriteLine(DateTime.Now.ToShortTimeString());
+            WriteLine(DateTime.Now.ToShortTimeString());
         }
-
+        
         public static void PrintDate()
         {
-            Console.WriteLine(DateTime.Today.ToShortDateString());
+            WriteLine(DateTime.Today.ToShortDateString());
+        }
+
+        private static void SayHello()
+        {
+            Console.WriteLine("Hello!!!");
         }
     }
 }

@@ -14,6 +14,10 @@ namespace SimpleUtilityClass
             //Это работает нормально!
             TimeUtilClass.PrintDate();
             TimeUtilClass.PrintTime();
+            
+            //Ошибка, метод SayHello - приватный
+            //TimeUtilClass.SayHello();
+
 
             Console.ReadLine();
         }
