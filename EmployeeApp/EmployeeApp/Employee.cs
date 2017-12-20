@@ -12,66 +12,83 @@ namespace EmployeeApp
         private string empName;
         private int empID;
         private float currPay;
+        private int empAge;
+        private int empSSN;
 
-        //Метод доступа
-        public string GetName()
+       //Свойства
+       public string Name
         {
-            return empName;
-        }
-
-        public int GetID()
-        {
-            return empID;
-        }
-
-        public float GetPay()
-        {
-            return currPay;
-        }
-
-        //Метод изминения
-        public void SetName(string name)
-        {
-            if (name.Length > 15)
-            {
-                Console.WriteLine("Error! Name length exceeds 15 characters!");
-            }
-            else
-            {
-                empName = name;
+            get { return empName; }
+            set {
+                if (value.Length > 15)
+                {
+                    Console.WriteLine("Error! Name length exceeds 15 characters!");
+                } else
+                {
+                    empName = value;
+                }
             }
         }
 
-        public void SetID(int id)
+        public int ID
         {
-            empID = id;
+            get { return empID; }
+            set { empID = value; }
         }
 
-        public void SetPay(float pay)
+        public float Pay
         {
-            currPay = pay;
+            get { return currPay; }
+            set { currPay = value; }
+        }
+
+        public int Age
+        {
+            get { return empAge; }
+            set { empAge = value; }
+        }
+
+        public int SocialSecurityNumber
+        {
+            get { return empSSN; }
         }
 
         //Конструкторы.
         public Employee() { }
-        public Employee(string name, int id, float pay)
+
+        public Employee(int id, string name, float pay)
         {
-            empName = name;
             empID = id;
+            empName = name;
             currPay = pay;
+            Random rnd1 = new Random();
+            empSSN = rnd1.Next(1, 20);
+        }
+
+        public Employee(int id, string name, int age, float pay)
+        {
+            empID = id;
+            empName = name;
+            empAge = age;
+            currPay = pay;
+            Random rnd = new Random();
+            empSSN = rnd.Next(1, 20);
         }
 
         //Методы.
         public void GiveBonus(float amount)
         {
-            currPay += amount;
+            Pay += amount;
         }
 
         public void DisplayStatus()
         {
             Console.WriteLine("Name: {0}", empName); // имя сотрудника
             Console.WriteLine("ID: {0}", empID); // идентефикационный номер сотрудника
+            Console.WriteLine("Age: {0}", empAge); // возраст сотрудника
             Console.WriteLine("Pay: {0}", currPay); // текущая выплата
+            Console.WriteLine("SSN: {0}", empSSN); // текущий социальный номер страхования
+
             Console.ReadLine();
         }
     }

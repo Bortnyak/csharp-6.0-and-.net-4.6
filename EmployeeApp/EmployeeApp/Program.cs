@@ -10,19 +10,26 @@ namespace EmployeeApp
     {
         static void Main(string[] args)
         {
-            Employee emp = new Employee("Volodja", 1, 15000);
-            emp.DisplayStatus();
+            Employee vova = new Employee(1, "Volodja", 21, 28000);
+            vova.DisplayStatus();
+
+            Employee dejv = new Employee(1, "Dejv", 32, 23000);
+            dejv.DisplayStatus();
 
             Employee marv = new Employee();
-            marv.SetName("Marvin");
-            marv.SetID(2);
-            marv.SetPay(3200);
+            marv.ID = 2;
+            marv.Name = "Marvin";
+            marv.Age = 22;
+            marv.Pay = 20000;
             marv.DisplayStatus();
 
+        
             Employee harry = new Employee();
-            harry.SetName("Vingardium laviossa");
-
-
+            harry.ID = 3;
+            harry.Name = "Harry";
+            harry.Age = 23;
+            harry.Pay = 19011;
+            harry.DisplayStatus();
         }
     }
 }
