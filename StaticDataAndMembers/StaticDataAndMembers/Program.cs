@@ -15,17 +15,15 @@ namespace StaticDataAndMembers
             SavingsAccount s1 = new SavingsAccount(50);
 
             //Вывести текущую процентую ставку
-            Console.WriteLine("Interest Rate is {0}", SavingsAccount.GetInterestRate());
-
-            SavingsAccount.SetInterestRate(0.08);
+            Console.WriteLine("Interest Rate is {0}", SavingsAccount.InterestRate);
 
             //Создать второй объект счета.
             SavingsAccount s2 = new SavingsAccount(100);
-            Console.WriteLine("Interest Rate is {0}", SavingsAccount.GetInterestRate());
+            Console.WriteLine("Interest Rate is {0}", SavingsAccount.InterestRate);
 
-            //Создать новый объект; это не 'сбросит' процентую ставку.
+            //Создать новый объект
             SavingsAccount s3 = new SavingsAccount(1000.75);
-            Console.WriteLine("Interest Rate is: {0}", SavingsAccount.GetInterestRate());
+            Console.WriteLine("Interest Rate is: {0}", SavingsAccount.InterestRate);
 
             Console.ReadLine();
         }

@@ -9,32 +9,19 @@ namespace StaticDataAndMembers
     class SavingsAccount
     {
         public double currBalance;
- 
-        //Статический элемент данных.
-        public static double currentInterestRate;
+        private static double currentInterestRate = 0.04;
+
+        //Статическое свойство.
+        public static double InterestRate
+        {
+            get { return currentInterestRate; }
+            set { currentInterestRate = value; }
+        }
 
         //Конструктор устанавливает значение статического поля currInterestRete.
         public SavingsAccount(double balance)
         {
             currBalance = balance;
-        }
-
-        //Статический конструктор
-        static SavingsAccount()
-        {
-            Console.WriteLine("In static ctor!");
-            currentInterestRate = 0.04; //Статические данные!
-        }
-
-        //Статические члены для установки/получения процентной ставки
-        public static void SetInterestRate(double newRate)
-        {
-            currentInterestRate = newRate;
-        }
-
-        public static double GetInterestRate()
-        {
-            return currentInterestRate;
         }
         
     }
