@@ -9,12 +9,14 @@ namespace StaticDataAndMembers
     class SavingsAccount
     {
         public double currBalance;
-
+ 
         //Статический элемент данных.
-        public static double currentInterestRate = 0.04;
+        public static double currentInterestRate;
 
+        //Конструктор устанавливает значение статического поля currInterestRete.
         public SavingsAccount(double balance)
         {
+            currentInterestRate = 0.04; //Статические данные!
             currBalance = balance;
         }
 

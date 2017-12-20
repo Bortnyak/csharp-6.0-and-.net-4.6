@@ -11,10 +11,16 @@ namespace StaticDataAndMembers
         static void Main(string[] args)
         {
             Console.WriteLine("***** Fun with Static Data *****\n");
+            //Создать объект счета.
             SavingsAccount s1 = new SavingsAccount(50);
-            SavingsAccount s2 = new SavingsAccount(100);
 
             //Вывести текущую процентую ставку
+            Console.WriteLine("Interest Rate is {0}", SavingsAccount.GetInterestRate());
+
+            SavingsAccount.SetInterestRate(0.08);
+
+            //Создать второй объект счета.
+            SavingsAccount s2 = new SavingsAccount(100);
             Console.WriteLine("Interest Rate is {0}", SavingsAccount.GetInterestRate());
 
             //Создать новый объект; это не 'сбросит' процентую ставку.
