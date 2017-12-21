@@ -12,6 +12,7 @@ namespace AutoProps
         public string PetName { get; set; }
         public int Speed { get; set; }
         public string Color { get; set; }
+        private int numberOfDoors = 2;
         //public int MyReadOnlyProp { get;}
 
         public void DisplayStatus()
