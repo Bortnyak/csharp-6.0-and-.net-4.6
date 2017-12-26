@@ -8,14 +8,10 @@ namespace AutoProps
 {
     class Garage
     {
-        public int NumbersOfCars { get; set; }
-        public Car MyAuto { get; set; }
+        public int NumbersOfCars { get; set; } = 1;
+        public Car MyAuto { get; set; } = new Car();
 
-        public Garage()
-        {
-            MyAuto = new Car();
-            NumbersOfCars = 1;
-        }
+        public Garage() {}
 
         public Garage(Car car, int number)
         {
