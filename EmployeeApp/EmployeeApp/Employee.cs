@@ -6,15 +6,9 @@ using System.Threading.Tasks;
 
 namespace EmployeeApp
 {
-    class Employee
+    partial class Employee
     {
-        //Поля данных.
-        private string empName;
-        private int empID;
-        private float currPay;
-        private int empAge;
-        private int empSSN;
-
+        
        //Свойства
        public string Name
         {
@@ -51,28 +45,6 @@ namespace EmployeeApp
         public int SocialSecurityNumber
         {
             get { return empSSN; }
-        }
-
-        //Конструкторы.
-        public Employee() { }
-
-        public Employee(int id, string name, float pay)
-        {
-            empID = id;
-            empName = name;
-            currPay = pay;
-            Random rnd1 = new Random();
-            empSSN = rnd1.Next(1, 20);
-        }
-
-        public Employee(int id, string name, int age, float pay)
-        {
-            empID = id;
-            empName = name;
-            empAge = age;
-            currPay = pay;
-            Random rnd = new Random();
-            empSSN = rnd.Next(1, 20);
         }
 
         //Методы.
