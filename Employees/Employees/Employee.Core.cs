@@ -2,7 +2,7 @@
 
 namespace Employees
 {
-    partial class Employee
+    abstract partial class Employee
     {
         // Field data.
         protected string empName;

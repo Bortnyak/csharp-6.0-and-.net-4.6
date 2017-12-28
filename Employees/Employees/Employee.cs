@@ -2,7 +2,7 @@
 
 namespace Employees
 {
-    partial class Employee
+    abstract partial class Employee
     {
 
         #region Class methods 
@@ -32,7 +32,7 @@ namespace Employees
             // Do a check on incoming value
             // before making assignment.
             if (name.Length > 15)
-                Console.WriteLine("Error!  Name must be less than 15 characters!");
+                Console.WriteLine("Error! Name must be less than 15 characters!");
             else
                 empName = name;
         }

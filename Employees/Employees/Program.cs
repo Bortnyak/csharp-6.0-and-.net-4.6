@@ -23,6 +23,7 @@ namespace Employees
             SalesPerson fran = new SalesPerson("Fran", 43, 93, 3000, "932-32-3232", 31);
             fran.GiveBonus(200);
             fran.DisplayStats();
+
             Console.ReadLine();
         }
     }

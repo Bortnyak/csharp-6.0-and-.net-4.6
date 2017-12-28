@@ -13,7 +13,7 @@ namespace Employees
         public SalesPerson() { }
 
         //Бонус продавца зависит от количества продаж.
-        public override void GiveBonus(float amount)
+        public override sealed void GiveBonus(float amount)
         {
             int salesBonus = 0;
             if (SalesNumber >= 0 && SalesNumber <= 100)
