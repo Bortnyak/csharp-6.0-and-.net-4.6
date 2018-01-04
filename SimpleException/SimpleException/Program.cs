@@ -25,13 +25,15 @@ namespace SimpleException
             }
             catch (Exception e)
             {
-
-                Console.WriteLine("\n*** Error! ***");
-                Console.WriteLine("Method: {0}", e.TargetSite); //метод
+                Console.WriteLine("\n************ Error! ************");
+                Console.WriteLine("\nMember name: {0}", e.TargetSite); // имя члена
+                Console.WriteLine("Class defining member: {0}", e.TargetSite.DeclaringType); //клас, определяющий член
+                Console.WriteLine("Member type: {0}", e.TargetSite.MemberType); //тип члена
                 Console.WriteLine("Message: {0}", e.Message); //сообщение
                 Console.WriteLine("Source: {0}", e.Source); //источник
+                Console.WriteLine("Stack: {0}", e.StackTrace);
             }
-            Console.WriteLine("\n***** Out of Exception logic *****");
+            Console.WriteLine("\n************ Out of Exception logic ************");
             Console.ReadLine();
         }
     }

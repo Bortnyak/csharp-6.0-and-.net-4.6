@@ -51,6 +51,7 @@ namespace SimpleException
 
                     //Использовать ключевое слово throw для генерации исключения.
                     throw new Exception(string.Format("{0} has overheated!", PetName));
+                    //throw new Exception()
                 }
                 else
                 {
