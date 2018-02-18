@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ICloneableExample
 {
@@ -29,8 +25,6 @@ namespace ICloneableExample
             // Клонировать то, что получено, и вывести его имя.
             object theClone = c.Clone();
             Console.WriteLine("You clone is a: {0}", theClone.GetType().Name);
-
-           
         }
     }
 }
